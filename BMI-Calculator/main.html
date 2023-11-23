@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BMI Calculator</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>BMI CALCULATOR</h1>
+        <p>Enter your weight and height below</p>
+        <br /><br />
+        <div class="bmi-info">
+          <ul>
+            <li>
+              <p><b>BMI Categories:</b></p>
+            </li>
+            <li>
+              <p><b>Underweight</b>: under 18.5</p>
+            </li>
+            <li>
+              <p><b>Normal weight</b>: 18.5 - 24.9</p>
+            </li>
+            <li>
+              <p><b>Overweight</b>: 25 - 29.9</p>
+            </li>
+            <li>
+              <p><b>Obesity</b>: 30 or greater</p>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <!-- FORM -->
+        <form id="bmi-form">
+          <div id="input">
+            <label for="weight">Weight (KG)</label>
+            <input type="number" id="weight" placeholder="e.g 70" required autocomplete="off"/>
+          </div>
+          <br />
+          <div id="input">
+            <label for="height">Height(CM)</label>
+            <input type="number" id="height" placeholder="e.g 175" required autocomplete="off"/>
+          </div>
+          <button type="submit" onblur="resetForm()">Submit</button>
+        </form>
+        <br /><br />
+        <!-- SHOW RESULT -->
+        <div class="result-section">
+          <p>Result:</p>
+          <div id="result"></div>
+        </div>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
